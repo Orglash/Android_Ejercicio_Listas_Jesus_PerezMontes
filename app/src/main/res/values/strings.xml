@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Ejercicio_Listas_Jesus_PerezMontes</string>
+    <string name="app_name">Ejercicio Listas Jesus Perez</string>
     <string name="title_lugar">Lugar</string>
     <string name="title_provincia">Provincia</string>
+    <string name="intro_datos">Introducir Datos</string>
+    <string name="guarda_datos">Guardar Datos</string>
 </resources>
