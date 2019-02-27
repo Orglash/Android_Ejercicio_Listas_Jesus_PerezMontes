@@ -14,9 +14,9 @@
 
         <EditText
             android:id="@+id/input_text_lugar"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Lugar"
+            android:hint="@string/title_lugar"
             android:singleLine="true" />
     </android.support.design.widget.TextInputLayout>
     <android.support.design.widget.TextInputLayout
@@ -27,9 +27,9 @@
 
         <EditText
             android:id="@+id/input_text_provincia"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Provincia"
+            android:hint="@string/title_provincia"
             android:singleLine="true" />
     </android.support.design.widget.TextInputLayout>
     <Button
@@ -37,7 +37,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
-        android:text="Guardar datos"
+        android:text="Introducir datos"
         android:textStyle="bold"
         android:gravity="center"/>
 

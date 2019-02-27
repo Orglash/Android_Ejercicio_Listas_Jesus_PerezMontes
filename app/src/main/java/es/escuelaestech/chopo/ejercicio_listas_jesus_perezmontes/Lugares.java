@@ -1,25 +1,18 @@
 package es.escuelaestech.chopo.ejercicio_listas_jesus_perezmontes;
 
-import java.util.UUID;
+import java.io.Serializable;
 
-public class Lugares {
+public class Lugares implements Serializable {
 
     private String mLugar;
     private String mProvincia;
-    private String mId;
 
     public Lugares(String lugar, String provincia) {
-        mId= UUID.randomUUID().toString();
         mLugar = lugar;
         mProvincia = provincia;
     }
+    public Lugares() {
 
-    public String getId() {
-        return mId;
-    }
-
-    public void setId(String mId) {
-        this.mId = mId;
     }
 
     public String getLugar() {
@@ -41,8 +34,7 @@ public class Lugares {
 
     @Override
     public String toString() {
-        return  "ID='" + mId + '\'' +
-                ", Lugar='" + mLugar + '\'' +
+        return  ", Lugar='" + mLugar + '\'' +
                 ", Provincia='" + mProvincia + '\'';
     }
 

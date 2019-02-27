@@ -9,6 +9,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class LugaresAdapter extends ArrayAdapter<Lugares> {
@@ -27,12 +28,12 @@ public class LugaresAdapter extends ArrayAdapter<Lugares> {
                     R.layout.list_item_lugares, parent, false);
         }
 
-        TextView name = convertView.findViewById(R.id.tv_lugar);
-        TextView title = convertView.findViewById(R.id.tv_provincia);
+        TextView lugar = convertView.findViewById(R.id.tv_lugar);
+        TextView provincia = convertView.findViewById(R.id.tv_provincia);
 
         Lugares item = getItem(position);
-        name.setText(item.getLugar());
-        title.setText(item.getProvincia());
+        lugar.setText(item.getLugar());
+        provincia.setText(item.getProvincia());
 
         return convertView;
     }

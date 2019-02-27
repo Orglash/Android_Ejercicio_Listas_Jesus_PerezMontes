@@ -13,18 +13,12 @@
         android:text="Introducir datos"
         android:textStyle="bold"
         android:gravity="center"/>
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_below="@id/button"
-        android:layout_height="match_parent">
+
         <ListView
             android:id="@+id/lugares_list"
+            android:layout_below="@id/button"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:divider="@null" />
-    </ScrollView>
-
-
-
 
 </RelativeLayout>

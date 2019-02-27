@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Ejercicio_Listas_Jesus_PerezMontes</string>
+    <string name="title_lugar">Lugar</string>
+    <string name="title_provincia">Provincia</string>
 </resources>

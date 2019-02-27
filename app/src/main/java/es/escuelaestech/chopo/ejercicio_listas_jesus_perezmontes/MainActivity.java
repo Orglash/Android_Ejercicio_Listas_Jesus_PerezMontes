@@ -12,21 +12,20 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     ListView mList;
+    List<Lugares> lugares;
     ArrayAdapter<Lugares> mAdapter;
-    ArrayList<String> lugares;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        inicialize();
 
-        mList = findViewById(R.id.lugares_list);
-
-        mList.setAdapter(mAdapter);
 
         mList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
@@ -37,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
         });
+
         final Button button = findViewById(R.id.button);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,9 +54,18 @@ public class MainActivity extends AppCompatActivity {
 
         if(requestCode == 2){
             assert data != null;
-            String message = data.getStringExtra("MESSAGE");
-            lugares.add(message);
-            mList.setAdapter(mAdapter);
+            String intent_lugar= data.getStringExtra("Lugar");
+            String intent_provincia= data.getStringExtra("Provincia");
+            Lugares lugar = new Lugares(intent_lugar, intent_provincia);
+            lugares.add(lugar);
+            mAdapter.notifyDataSetChanged();
         }
+    }
+    private void inicialize(){
+        lugares = new ArrayList<Lugares>();
+        mList = findViewById(R.id.lugares_list);
+        mAdapter= new LugaresAdapter(this, lugares);
+        mList.setAdapter(mAdapter);
+
     }
 }

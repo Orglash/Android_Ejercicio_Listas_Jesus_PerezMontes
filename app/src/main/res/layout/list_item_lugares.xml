@@ -11,18 +11,33 @@
     android:paddingTop="8dp">
 
     <TextView
-        android:id="@+id/tv_lugar"
+        android:id="@+id/title_lugar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="56dp"
         android:textAppearance="?attr/textAppearanceListItem"
-        tools:text="Alexander Pierrot" />
-
+        android:text="@string/title_lugar" />
+    <TextView
+        android:id="@+id/tv_lugar"
+        android:layout_toEndOf="@id/title_lugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        tools:text="Linares" />
+    <TextView
+        android:id="@+id/title_provincia"
+        android:layout_below="@id/title_lugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        android:textAppearance="?attr/textAppearanceListItem"
+        android:text="@string/title_provincia" />
     <TextView
         android:id="@+id/tv_provincia"
+        android:layout_toEndOf="@id/title_provincia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/tv_lugar"
         android:layout_below="@+id/tv_lugar"
-        tools:text="CEO" />
+        tools:text="Jaen" />
 </RelativeLayout>
